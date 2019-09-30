@@ -3,6 +3,9 @@
 Created on Sat Sep 14 14:10:38 2019
 
 @author: Garrett
+
+initializes database to store data. Will be called in main script if database
+does not exist. Might have to turn it into a function. 
 """
 
 
@@ -20,10 +23,10 @@ c.execute("""CREATE TABLE lppls_scores (
         bubble_start text,
         days_out integer,
         bubble_per real,
+        bubble_size real,
+        agg_score real,
         mu_per real,
         std_dev real,
-        agg_score real,
-        IV_per real)
-        """)
+        IV_per real)""")
 
 conn.commit()
